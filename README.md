@@ -1,5 +1,13 @@
-# utils-extend
-[![NPM](https://nodei.co/npm/utils-extend.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/utils-extend/)  
+## NOTE : This is a patch version of ```utils-extend``` module, used to extend the nodejs util module. 
+patch version has fixes related to fix the github security :
+- [Prototype Pollution](https://github.com/advisories/GHSA-6pq3-928q-x6w6)
+- [utils-extend Prototype Pollution](https://github.com/advisories/GHSA-7qgg-vw88-cc99)
+
+
+[![npm version](https://badge.fury.io/js/utils-extend.svg)](http://badge.fury.io/js/@Ecorpin/utils-extend)
+[![npm](https://img.shields.io/npm/l/utils-extend.svg)](https://www.npmjs.com/package/utils-extend)
+
+
 Extend nodejs util api, and it is light weight and simple.
 ```
 var util = require('utils-extend');
