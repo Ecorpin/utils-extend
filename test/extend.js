@@ -52,3 +52,27 @@ describe('extend', function() {
     });
   });
 });
+
+describe('extend – prototype‐pollution guard', function() {
+  it('should ignore __proto__ and not add own-property on target', function() {
+    var target    = {};
+    // craft a source object that tries to assign to __proto__
+    var malicious = JSON.parse('{"__proto__": {"polluted": true}}');
+
+    util.extend(target, malicious);
+
+    // target itself must not gain 'polluted'
+    assert.strictEqual(target.polluted, undefined);
+  });
+
+  it('should not pollute Object.prototype via __proto__', function() {
+    // clean any leftover from previous runs
+    delete Object.prototype.polluted;
+
+    var malicious = { "__proto__": { "polluted": true } };
+    util.extend({}, malicious);
+
+    // global prototype must remain untouched
+    assert.strictEqual(Object.prototype.polluted, undefined);
+  });
+});
