@@ -28,6 +28,8 @@ function extend(target, source) {
   var value;
 
   for (var key in source) {
+    if (["__proto__", "prototype", "constructor"].includes(key)) continue;
+
     value = source[key];
 
     if (Array.isArray(value)) {
