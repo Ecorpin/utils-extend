@@ -1,5 +1,5 @@
 {
-  "name": "@ecorpin/utils-extend-patch",
+  "name": "@devbuggs/utils-extend-patch",
   "version": "1.0.10",
   "description": "Patched utils-extend with deny-list for prototype pollution in utils-extend",
   "main": "index.js",
