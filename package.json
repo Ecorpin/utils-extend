@@ -1,7 +1,7 @@
 {
   "name": "@Ecorpin/utils-extend",
   "version": "1.0.10",
-  "description": "Extend nodejs util api, and it is light weight and simple",
+  "description": "Patched utils-extend with deny-list for prototype pollution",
   "main": "index.js",
   "scripts": {
     "test": "mocha test"
@@ -11,12 +11,16 @@
     "url": "git+https://github.com/Ecorpin/utils-extend.git"
   },
   "keywords": [
+    "deep-extend",
     "util",
     "utils",
     "util-extend",
     "extend",
     "underscore",
-    "node underscore"
+    "node underscore",
+    "patch",
+    "prototype-pollution",
+    "security"
   ],
   "author": "devBuggs <bhagwan.5602@gmail.com>",
   "devDependencies": {
