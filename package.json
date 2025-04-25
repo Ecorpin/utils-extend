@@ -1,6 +1,6 @@
 {
   "name": "@Ecorpin/utils-extend",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Extend nodejs util api, and it is light weight and simple",
   "main": "index.js",
   "scripts": {
